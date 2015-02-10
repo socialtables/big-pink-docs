@@ -11,7 +11,7 @@ app.use(function *(next){
 
 // response
 app.use(function *(){
-  this.body = 'Hello World';
+  this.body = 'Hello Dan and Rami';
 });
  
 app.listen(3000);
