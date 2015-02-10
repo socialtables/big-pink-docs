@@ -1,0 +1,24 @@
+{
+  "name": "big-pink-docs",
+  "version": "0.0.0",
+  "description": "STUDI project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/socialtables/big-pink-docs.git"
+  },
+  "author": "Erica, Judy, and Tuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/socialtables/big-pink-docs/issues"
+  },
+  "homepage": "https://github.com/socialtables/big-pink-docs",
+  "dependencies": {
+    "github": "^0.2.3",
+    "koa": "^0.17.0",
+    "request": "^2.53.0"
+  }
+}
