@@ -1,0 +1,32 @@
+{
+  "name": "big-pink-docs",
+  "version": "0.0.0",
+  "description": "A reader of your project's READMEs with display of relative age of README versus code in the directory ",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/socialtables/big-pink-docs.git"
+  },
+  "keywords": [
+    "studi",
+    "awesome",
+    "magical",
+    "cool"
+  ],
+  "author": "STUDI group",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/socialtables/big-pink-docs/issues"
+  },
+  "homepage": "https://github.com/socialtables/big-pink-docs",
+  "dependencies": {
+    "github": "^0.2.3",
+    "koa": "^0.17.0",
+    "koa-body": "^1.0.0",
+    "koa-router": "^4.0.1",
+    "request": "^2.53.0"
+  }
+}
