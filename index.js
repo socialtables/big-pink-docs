@@ -3,7 +3,7 @@ var Github = require('github-api');
 var app = koa();
 
 var github = new Github({
-  token: "621a940ffc715c1a9ee6e694c76706d09fdbe3e8",
+  token: "place your token here",
   auth: "oauth"
 });
 
