@@ -1,0 +1,23 @@
+{
+  "name": "big-pink-docs",
+  "version": "1.0.0",
+  "description": "A reader of your project's READMEs with display of relative age of README versus code in the directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/socialtables/big-pink-docs.git"
+  },
+  "author": "sijie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/socialtables/big-pink-docs/issues"
+  },
+  "homepage": "https://github.com/socialtables/big-pink-docs",
+  "dependencies": {
+    "github-api": "^0.10.3",
+    "koa": "^0.17.0"
+  }
+}
