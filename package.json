@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/socialtables/big-pink-docs",
   "dependencies": {
+    "db-migrate": "^0.9.7",
     "github-api": "^0.10.3",
-    "koa": "^0.17.0"
+    "koa": "^0.17.0",
+    "mysql": "^2.5.5"
   }
 }

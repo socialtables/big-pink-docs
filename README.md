@@ -7,5 +7,11 @@ A reader of your project's READMEs with display of relative age of README versus
 3.  vim .bash_profile
 4.	GITHUB_KEY="token generated on github.com"; export GITHUB_KEY
 5.	save and exit vim
-6. 	Your done.
+6. 	You're done.
 7.	No, really, you're done.
+
+##Set Up Database
+1. Create database "bigpinkdatabase" in Sequel Pro || mysqladmin create bigpinkdatabase -uroot
+2. Run db-migrate up in bigpinkdocs directory.
+
+
