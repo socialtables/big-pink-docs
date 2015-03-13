@@ -6,8 +6,8 @@ exports.up = function(db, callback) {
 	db.createTable('readmes', {
     id: { type: 'int', primaryKey: true,  autoIncrement: true  },
     body: 'text',
-    created_at:"date",
-    updated_at:"date",
+    created_at:"timestamp",
+    updated_at:"timestamp",
     commit_message:"text",
     commit_hash:"string",
     url:"string",
