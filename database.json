@@ -1,0 +1,7 @@
+{
+  "development": {
+      "driver": "mysql",
+      "user": "root",
+      "database": "bigpinkdatabase"
+  }
+}
