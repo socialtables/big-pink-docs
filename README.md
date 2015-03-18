@@ -14,4 +14,7 @@ A reader of your project's READMEs with display of relative age of README versus
 1. Create database "bigpinkdatabase" in Sequel Pro || mysqladmin create bigpinkdatabase -uroot
 2. Run db-migrate up in bigpinkdocs directory.
 
-
+##Fetch Data
+1. Run node --harmony index.js
+2. Hit this route: localhost:2434/get-data
+3. Data should appear in db

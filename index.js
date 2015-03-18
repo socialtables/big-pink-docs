@@ -19,7 +19,7 @@ var repo = github.getRepo("socialtables", "S3");
 app.get("/get-data", function *(){
 
 	repo.getTree('master?recursive=true', function(err, tree) {
-		
+
 		if(err) {
 			console.error('server error', err);
 		}
@@ -45,14 +45,20 @@ function updateDatabase(path, sha, id){
 		if(err) {
 			console.error('server error', err);
 		}
-		var committer = commits[0].commit.committer.name;
+
+		var committer = commits[0].author.login;
 		var commitMessage = commits[0].commit.message;
 		var createdAt = commits[0].commit.author.date;
 		var updatedAt = commits[0].commit.committer.date;
 		var commitHash = commits[0].sha;
-		var updateReadme = new Readme({id: id})
-		.save({commit_message:commitMessage, created_at:createdAt, updated_at: updatedAt, commit_hash: commitHash}, {patch: true});
-	})
+
+		var newAuthor = new Author({name: committer}).fetch().then(function(author){
+			var authorId = author.attributes.id;
+			var updateReadme = new Readme({id: id})
+				.save({commit_message:commitMessage, created_at:createdAt, updated_at: updatedAt, commit_hash: commitHash, author_id: authorId}, {patch: true});	
+		});
+	});
+
 	repo.getBlob(sha, function(err, blob) {
 		if(err) {
 			console.error('server error', err);
@@ -61,8 +67,7 @@ function updateDatabase(path, sha, id){
 		var readmeBody = blob;
 		var updateReadme = new Readme({id: id})
 		.save({body:readmeBody}, {patch: true});
-
-	})
+	});
 };
 
 
