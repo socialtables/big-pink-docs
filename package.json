@@ -24,5 +24,8 @@
     "koa": "^0.17.0",
     "koa-router": "^4.2.0",
     "mysql": "^2.5.5"
+  },
+  "devDependencies": {
+    "async": "^0.9.0"
   }
 }
