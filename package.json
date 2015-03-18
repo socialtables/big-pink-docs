@@ -4,6 +4,7 @@
   "description": "A reader of your project's READMEs with display of relative age of README versus code in the directory",
   "main": "index.js",
   "scripts": {
+    "start": "node --harmony index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
