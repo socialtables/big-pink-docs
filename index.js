@@ -6,6 +6,7 @@ var router = require("koa-router");
 app.bookshelf = require("./models/index");
 var Author = require("./models/author");
 var Readme = require("./models/readme");
+var debug = require('debug')('big-pink-docs');
 
 app.use(router(app));
 
@@ -53,7 +54,11 @@ function updateDatabase(path, sha, id){
 		var commitHash = commits[0].sha;
 
 		var newAuthor = new Author({name: committer}).fetch().then(function(author){
-			var authorId = author.attributes.id;
+			debug(author);
+			var authorId = null;
+			if (author) {
+				authorId = author.attributes.id;
+			}
 			var updateReadme = new Readme({id: id})
 				.save({commit_message:commitMessage, created_at:createdAt, updated_at: updatedAt, commit_hash: commitHash, author_id: authorId}, {patch: true});	
 		});

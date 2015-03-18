@@ -3,7 +3,7 @@ var type = dbm.dataType;
 
 exports.up = function(db, callback) {
 
-	db.createTable('readmes', {
+  db.createTable('readmes', {
     id: { type: 'int', primaryKey: true,  autoIncrement: true  },
     body: 'text',
     created_at:"timestamp",
@@ -12,10 +12,10 @@ exports.up = function(db, callback) {
     commit_hash:"string",
     url:"string",
     author_id:"int"
- }, callback);
+  }, callback);
 
 };
 
 exports.down = function(db, callback) {
-	db.dropTable("authors", callback);
+	db.dropTable("readmes", callback);
 };
